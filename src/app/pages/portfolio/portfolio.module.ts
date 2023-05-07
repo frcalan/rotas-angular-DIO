@@ -15,4 +15,4 @@ import { CardComponent } from './card/card.component';
     CommonModule
   ]
 })
-export class PortifolioModule { }
+export class PortfolioModule { }

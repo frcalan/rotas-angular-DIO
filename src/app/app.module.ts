@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { IndexModule } from './pages/index/index.module';
-import { PortifolioModule } from './pages/portifolio/portifolio.module';
+import { PortfolioModule } from './pages/portfolio/portfolio.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { PortifolioModule } from './pages/portifolio/portifolio.module';
     BrowserModule,
     AppRoutingModule,
     IndexModule,
-    PortifolioModule
+    PortfolioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
