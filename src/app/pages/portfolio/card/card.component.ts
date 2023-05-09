@@ -8,12 +8,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CardComponent implements OnInit {
 
-  // http://localhost:4200/portfolio/1 ex: rota com param...
+
   constructor(
     private parametrizador: ActivatedRoute,
     private navegador: Router
     ) {
+    // http://localhost:4200/portfolio/1 ex: rota com param...
     this.parametrizador.params.subscribe(
+      res => console.log(res)
+    )
+
+    // http://localhost:4200/portfolio/1 ex: rota filha com param...
+    this.parametrizador.firstChild?.params.subscribe(
       res => console.log(res)
     )
 
@@ -21,10 +27,15 @@ export class CardComponent implements OnInit {
     this.parametrizador.queryParams.subscribe(
       res => console.log(res)
     )
+
+    // http://localhost:4200/portfolio/1?{name=jose&token=123} ex: rota filha com query param...
+    this.parametrizador.firstChild?.queryParams.subscribe(
+      res => console.log(res)
+    )
   }
   ngOnInit(): void {
-    setInterval(() => {
-      this.navegador.navigate(['/'])
-    }, 5000)
+   // setInterval(() => {
+   //   this.navegador.navigate(['/'])
+   // }, 5000)
   }
 }
